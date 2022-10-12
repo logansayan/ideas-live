@@ -1,1 +1,1 @@
-web: gunicorn ideas-new.wsgi --log-file -
+web: gunicorn ideas.wsgi --log-file -
