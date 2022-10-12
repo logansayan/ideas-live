@@ -1,0 +1,22 @@
+{
+  "name": "ideas-django",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "compile-sass": "node-sass ./static/sass/main.scss ./static/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logansayan/ideas-django.git"
+  },
+  "author": "Sayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/logansayan/ideas-django/issues"
+  },
+  "homepage": "https://github.com/logansayan/ideas-django#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

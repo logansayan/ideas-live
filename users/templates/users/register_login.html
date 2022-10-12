@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+  Ideas | Never let your awesome ideas fade away
+{% endblock page_title %}
+
+{% block content %}
+  <a class="brand" href="{% url 'login' %}"><i class="fa-solid fa-circle-notch"></i>IDEAS</a>
+  <p class="phrase">Never let your awesome <span>ideas</span> fade away!</p>
+
+  {% if page == "register" %}
+
+    <form action="{% url 'register' %}" class="auth" method="POST">
+      {% csrf_token %}
+      {% for field in form %}
+        {{ field }}
+      {% endfor %}
+      <div class="auth__button-group">
+          <button type="submit" class="auth__submit">Register</button>
+          <a href="{% url 'login' %}" class="auth__secondary-btn">Already have an account?</a>
+      </div>
+    </form>
+
+  {% else %}
+    <form action="{% url 'login' %}" class="auth" method="POST">
+      {% csrf_token %}
+      <input type="text" class="auth__input" placeholder="Username" name="username">
+      <input type="password" class="auth__input" placeholder="Password" name="password">
+      <div class="auth__button-group">
+          <button type="submit" class="auth__submit">Login</button>
+          <a href="{% url 'register' %}" class="auth__secondary-btn">Don't have an account?</a>
+      </div>
+    </form>
+  {% endif %}
+
+{% endblock content %}

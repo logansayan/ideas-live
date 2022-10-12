@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+  {% if page == "edit" %}
+    Edit Idea
+  {% else %}
+    Add Idea
+  {% endif %}
+{% endblock page_title %}
+
+{% block content %}
+
+  <div class="profile">
+    <div class="profile__text">
+        <p class="profile__name">{{ request.user }}</p>
+        <a href="{% url 'logout' %}" class="profile__logout">Log out</a>
+    </div>
+  </div>
+
+  {% if page == "edit" %}
+    <p class="heading"></i>EDIT</a>
+  {% else %}
+    <p class="heading"></i>CREATE</a>
+  {% endif %}
+
+
+  <form action="" method="post" class="form" id="form">
+    {% csrf_token %}
+    {% for field in form %}
+      {{ field }}
+    {% endfor %}
+    <div class="form__buttons">
+        <a title="Back" class="form__reset" id="reset" href="{% url 'all_notes' %}"><i class="fa-solid fa-circle-arrow-left"></i></a>
+      {% if page == "edit" %}
+        <p class="form__time">Created: <span>{{ created }}</span></p>
+      {% endif %}
+        <button title="Add note" type="submit" class="form__add" id="add"><i class="fa-solid fa-circle-check"></i></button>
+      
+    </div>
+  </form>
+
+{% endblock content %}

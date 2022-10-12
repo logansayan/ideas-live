@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+  {{ request.user }}'s Ideas
+{% endblock page_title %}
+
+{% block content %}
+  <div class="profile">
+    <div class="profile__text">
+        <p class="profile__name">{{ request.user }}</p>
+        <a href="{% url 'logout' %}" class="profile__logout">Log out</a>
+    </div>
+  </div>
+
+  <a class="brand" href="{% url 'all_notes' %}"><i class="fa-solid fa-circle-notch"></i>IDEAS</a>
+  
+  <div class="notes">
+    {% if notes|length < 1 %}
+      <div class="notes__empty">
+        <h3>No ideas available</h3>
+        <p>Click on the + button to add an idea</p>
+      </div>
+    {% endif %}
+    {% for note in notes %}
+      <a title="View or edit" href="{% url 'edit_note' note.id %}" class="notes__item"> 
+        <h3>{{ note.title|slice:"20" }}</h3>
+        <p>{{ note.body|slice:"40" }}...</p>
+        <form action="{% url 'delete_note' note.id %}" method="GET">
+          <button type="submit" title="Delete this note" class="deleteNote"><i class="fa-solid fa-trash"></i></button>
+        </form>
+      </a>
+    {% endfor %}
+  </div>
+
+<a href="{% url 'add_note' %}" title="Add note" class="create"><i class="fa-solid fa-circle-plus"></i></a>
+{% endblock content %}
