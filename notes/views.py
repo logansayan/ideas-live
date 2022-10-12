@@ -1,9 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Note
 from .forms import AddNoteForm
-from users.models import Profile
 from django.contrib import messages
-from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.

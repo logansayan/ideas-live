@@ -1,11 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
-from django.urls import reverse
-
-from .models import Profile
-from django.contrib.auth.models import User
-from .forms import CustomUserCrationFrom, ProfileForm
+from .forms import CustomUserCrationFrom
 
 # Create your views here.
 

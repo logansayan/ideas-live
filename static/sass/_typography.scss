@@ -1,0 +1,134 @@
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding: 1.6rem 3rem;
+  z-index: 999;
+
+  &:not(:last-child) {
+      margin-bottom: 1rem;
+  }
+}
+
+.alert--info {
+  background-color: rgba($color-yellow, .5);
+}
+
+.alert--success {
+  background-color: rgba($color-green, .5);
+}
+
+.alert--error {
+  background-color: rgba($color-orange, .5);
+}
+
+.alert__message {
+  margin-right: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.alert__close {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: rgba($color-light, .5);
+  cursor: pointer;
+  border-radius: 7px;
+}
+// INDEX PAGE STYLE
+
+.brand {
+  text-align: center;
+  font-weight: 400;
+  font-family: "League Gothic", sans-serif;
+  margin-bottom: 5rem;
+  font-size: 5rem;
+  color: $color-light;
+  letter-spacing: 1.6rem;
+  text-decoration: none;
+
+  @include respond(tab-port) {
+      margin: 0;
+      position: absolute;
+      left: 2rem;
+      top: 3rem;
+      font-size: 4rem;
+  }
+}
+
+.heading {
+  text-align: center;
+  font-weight: 400;
+  font-family: "League Gothic", sans-serif;
+  margin-bottom: 5rem;
+  font-size: 5rem;
+  color: $color-light;
+  letter-spacing: 1.2rem;
+}
+
+.phrase {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 1.6rem;
+  color: $color-darkblue;
+  margin-bottom: 2.8rem;
+  text-align: center;
+
+  @include respond(tab-port) {
+      margin-top: 10rem;
+  }
+
+  &:hover {
+      span {
+          opacity: .2;
+      }
+  }
+
+  span {
+      transition: opacity .2s;
+  }
+}
+
+.button-group {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 4rem auto 0 auto;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 1.6rem 2.8rem;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.login-btn {
+  border: 2px solid $color-light;
+  background-color: transparent;
+  color: $color-light;
+  transition: all .2s;
+  margin-right: 2.8rem;
+
+  &:hover {
+      background-color: $color-light;
+      color: $color-darkblue;
+  }
+}
+
+.register-btn {
+  border: 2px solid $color-darkblue;
+  background-color: transparent;
+  color: $color-darkblue;
+  transition: all .2s;
+
+  &:hover {
+      background-color: $color-darkblue;
+      color: $color-light;
+  }
+}

@@ -40,36 +40,13 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
-.brand {
-  text-align: center;
-  font-weight: 400;
-  font-family: "League Gothic", sans-serif;
-  margin-bottom: 5rem;
-  font-size: 5rem;
-  color: #FFF;
-  letter-spacing: 1.6rem;
-  text-decoration: none; }
-  @media (max-width: 59.375em) {
-    .brand {
-      margin: 0;
-      position: absolute;
-      left: 2rem;
-      top: 3rem;
-      font-size: 4rem; } }
-
-.container {
-  width: 100%;
-  margin: 6rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
 .alert {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 7px;
-  padding: 1.6rem 3rem; }
+  padding: 1.6rem 3rem;
+  z-index: 999; }
   .alert:not(:last-child) {
     margin-bottom: 1rem; }
 
@@ -93,11 +70,22 @@ body {
   cursor: pointer;
   border-radius: 7px; }
 
-.hello {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); }
+.brand {
+  text-align: center;
+  font-weight: 400;
+  font-family: "League Gothic", sans-serif;
+  margin-bottom: 5rem;
+  font-size: 5rem;
+  color: #FFF;
+  letter-spacing: 1.6rem;
+  text-decoration: none; }
+  @media (max-width: 59.375em) {
+    .brand {
+      margin: 0;
+      position: absolute;
+      left: 2rem;
+      top: 3rem;
+      font-size: 4rem; } }
 
 .heading {
   text-align: center;
@@ -114,7 +102,8 @@ body {
   font-weight: 600;
   padding: 1.6rem;
   color: #191D32;
-  margin-bottom: 2.8rem; }
+  margin-bottom: 2.8rem;
+  text-align: center; }
   @media (max-width: 59.375em) {
     .phrase {
       margin-top: 10rem; } }
@@ -157,6 +146,13 @@ body {
   .register-btn:hover {
     background-color: #191D32;
     color: #FFF; }
+
+.container {
+  width: 100%;
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .auth {
   display: flex;
