@@ -10,13 +10,6 @@
 
 {% block content %}
 
-  <div class="profile">
-    <div class="profile__text">
-        <p class="profile__name">{{ request.user }}</p>
-        <a href="{% url 'logout' %}" class="profile__logout">Log out</a>
-    </div>
-  </div>
-
   {% if page == "edit" %}
     <p class="heading"></i>EDIT</a>
   {% else %}

@@ -43,7 +43,7 @@ def registerUser(request):
       return redirect("all_notes")
 
     else:
-      messages.debug("An error has occurred during registration!")
+      messages.debug(request, "An error has occurred during registration!")
   context = {
     "page": page,
     "form": form
