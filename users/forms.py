@@ -14,6 +14,7 @@ class CustomUserCrationFrom(UserCreationForm):
 
     self.fields["username"].widget.attrs["placeholder"] = "Username"
     self.fields["email"].widget.attrs["placeholder"] = "Email"
+    self.fields["email"].widget.attrs["required"] = "required"
     self.fields["password1"].widget.attrs["placeholder"] = "Password"
     self.fields["password2"].widget.attrs["placeholder"] = "Confirm password"
 

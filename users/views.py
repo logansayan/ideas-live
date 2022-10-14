@@ -28,8 +28,14 @@ def loginUser(request):
   return render(request, "users/register_login.html")
 
 def registerUser(request):
+  # If user is already logged in
+  
   page = "register"
   form = CustomUserCrationFrom()
+
+  if request.user.is_authenticated:
+    return redirect("all_notes")
+
   if request.method == "POST":
     form = CustomUserCrationFrom(request.POST)
     
