@@ -27,6 +27,12 @@
         min-width: 30rem;
     }
 
+    &__label {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-top: 2rem;
+    }
+
     &__input {
         width: 100%;
         background-color: rgba($color-light, .8);

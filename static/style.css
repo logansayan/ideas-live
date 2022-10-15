@@ -117,6 +117,11 @@ body {
   .phrase span {
     transition: opacity .2s; }
 
+.subheading {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #4C5B5C; }
+
 .button-group {
   margin-top: 4rem;
   display: flex;
@@ -171,6 +176,10 @@ body {
   @media (max-width: 59.375em) {
     .auth {
       min-width: 30rem; } }
+  .auth__label {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 2rem; }
   .auth__input {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);

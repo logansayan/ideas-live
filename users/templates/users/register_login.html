@@ -30,7 +30,7 @@
       {% csrf_token %}
       <input type="text" class="auth__input" placeholder="Username" name="username">
       <input type="password" class="auth__input" placeholder="Password" name="password">
-      <a href="" class="auth__forgot">Forgot password?</a>
+      <a href="{% url 'reset_password' %}" class="auth__secondary-btn">Forgot password?</a>
       <div class="auth__button-group">
           <button type="submit" class="auth__submit">Login</button>
           <a href="{% url 'register' %}" class="auth__secondary-btn">Don't have an account?</a>
