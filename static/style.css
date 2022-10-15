@@ -169,7 +169,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 40rem; }
+  min-width: 40rem;
+  position: relative; }
   @media (min-width: 112.5em) {
     .auth {
       min-width: 50rem; } }
@@ -196,6 +197,8 @@ body {
       outline: none;
       background-color: rgba(255, 255, 255, 0.5);
       border-bottom: 3px solid #4C5B5C; }
+  .auth__input--password {
+    position: relative; }
   .auth__button-group {
     width: 100%;
     display: flex;
@@ -222,6 +225,17 @@ body {
     font-size: 1.5rem; }
     .auth__secondary-btn:hover {
       text-decoration: underline; }
+
+.show_pass {
+  position: absolute;
+  color: #4C5B5C;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-70%);
+  font-size: 2rem;
+  cursor: pointer; }
+  .show_pass:hover {
+    color: #191D32; }
 
 .form {
   display: flex;

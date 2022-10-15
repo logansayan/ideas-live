@@ -18,6 +18,7 @@
     align-items: center;
     flex-direction: column;
     min-width: 40rem;
+    position: relative;
 
     @include respond(big-desktop) {
         min-width: 50rem;
@@ -56,6 +57,10 @@
         }
     }
 
+    &__input--password {
+        position: relative;
+    }
+
     &__button-group {
         width: 100%;
         display: flex;
@@ -90,6 +95,20 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.show_pass {
+    position: absolute;
+    color: $color-dark;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-70%);
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-darkblue;
     }
 }
 

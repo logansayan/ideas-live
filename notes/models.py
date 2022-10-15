@@ -5,7 +5,7 @@ import uuid
 # Create your models here.
 
 class Note(models.Model):
-  owner = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.SET_NULL)
+  owner = models.ForeignKey(Profile, null=True, blank=True, on_delete=models.CASCADE)
   title = models.CharField(max_length=200)
   body = models.TextField(null=True, blank=True)
   created = models.DateTimeField(auto_now_add=True)
